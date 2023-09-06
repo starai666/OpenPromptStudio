@@ -1,37 +1,44 @@
 <template>
-    <div class="IndexPage">
-        <nav>
-            <a class="logo" href="https://github.com/Moonvy/OpenPromptStudio"><b>OPS</b>/OpenPromptStudio</a>
-            <a class="icon-link" href="https://github.com/Moonvy/OpenPromptStudio" target="_blank">
-                <Icon icon="radix-icons:github-logo"
-            /></a>
+  <div class="IndexPage">
+    <nav>
+      <a class="logo"
+         href="javascript:;">星穹智绘 | prompt工具箱</a>
+      <a class="icon-link"
+         href="https://github.com/Moonvy/OpenPromptStudio"
+         target="_blank">
+      </a>
 
-            <div class="dict-button-box" @click="toggleDictPad()">
-                提示词词典
-                <button class="icon dict-button"><Icon icon="mingcute:book-4-fill" /></button>
-            </div>
-        </nav>
-        <PromptEditor ref="PromptEditor" :init-prompts="initPrompts" />
-        <section class="PromptDictPad" v-if="needDictPad" v-show="showDictPad">
-            <div class="title">
-                <Icon icon="mingcute:book-4-fill" />
-                提示词词典
-                <!--                <a class="github-dict" href="https://github.com/Moonvy/OpenPromptStudio" target="_blank">-->
-                <!--                    <Icon icon="radix-icons:github-logo" />一起维护词典</a-->
-                <!--                >-->
-                <button class="icon close-button" @click="toggleDictPad(false)">
-                    <Icon icon="radix-icons:cross-1" />
-                </button>
-            </div>
-            <PromptDict />
-        </section>
-        <footer>
-            <a href="https://github.com/Moonvy/OpenPromptStudio" target="_blank">
-                <img class="icon" src="/icon.svg" /> OpenPromptStudio / v{{ version }} /
-            </a>
-            <a href="https://moonvy.com/?homepage"> made by <img src="./assets/logo_full_cn.svg" /></a>
-        </footer>
-    </div>
+      <div class="dict-button-box"
+           @click="toggleDictPad()">
+        提示词词典
+        <button class="icon dict-button">
+          <Icon icon="mingcute:book-4-fill" />
+        </button>
+      </div>
+    </nav>
+    <PromptEditor ref="PromptEditor"
+                  :init-prompts="initPrompts" />
+    <section class="PromptDictPad"
+             v-if="needDictPad"
+             v-show="showDictPad">
+      <div class="title">
+        <Icon icon="mingcute:book-4-fill" />
+        提示词词典
+        <!--                <a class="github-dict" href="https://github.com/Moonvy/OpenPromptStudio" target="_blank">-->
+        <!--                    <Icon icon="radix-icons:github-logo" />一起维护词典</a-->
+        <!--                >-->
+        <button class="icon close-button"
+                @click="toggleDictPad(false)">
+          <Icon icon="radix-icons:cross-1" />
+        </button>
+      </div>
+      <PromptDict />
+    </section>
+    <footer>
+      <a href="https://www.starai666.com"
+         target="_blank">星穹智绘提供技术支持</a>
+    </footer>
+  </div>
 </template>
 <style lang="scss">
 .IndexPage {
